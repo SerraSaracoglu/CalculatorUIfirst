@@ -24,7 +24,27 @@ class MainActivity : AppCompatActivity() {
 
 
         val cikarma:Button=findViewById(R.id.substraction)
+
+        cikarma.setOnClickListener {
+            val number1:Int=Integer.parseInt(birinciSayi.toString())
+            val number2:Int=Integer.parseInt((ikinciSayi.toString()))
+            val last=number1-number2
+            sonuc.text=last.toString()
+        }
         val carpma:Button=findViewById(R.id.multiplication)
+
+        carpma.setOnClickListener {
+            val number1:Int=Integer.parseInt(birinciSayi.toString())
+            val number2:Int=Integer.parseInt((ikinciSayi.toString()))
+            val last=number1*number2
+            sonuc.text=last.toString()
+        }
         var bolme:Button=findViewById(R.id.division)
+        bolme.setOnClickListener {
+            val number1:Int=Integer.parseInt(birinciSayi.toString())
+            val number2:Int=Integer.parseInt((ikinciSayi.toString()))
+            val last=number1/number2
+            sonuc.text=last.toString()
+        }
     }
 }
